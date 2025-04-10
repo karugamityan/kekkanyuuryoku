@@ -16,7 +16,7 @@ bot = commands.Bot(command_prefix="/", intents=intents)
 
 # 許可されている部屋番号
 VALID_ROOMS = [
-    f"{i}-{c}" for i in range(1, 7) for c in ["A", "B", "C", "D", "E"]
+    f"{c}-{i}" for c in ["A", "B", "C", "D", "E", "F", "G", "H"] for i in range(1, 16)
 ]
 
 # リザルト保存ファイル
