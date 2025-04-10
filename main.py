@@ -30,7 +30,7 @@ if not os.path.exists(RESULTS_FILE):
 # /result コマンド
 @bot.tree.command(name="result", description="勝利したプレイヤーが試合結果を登録します。")
 @app_commands.describe(
-    room="部屋番号（例: 3-A）",
+    room="部屋番号（例: A-3）",
     uma="使用したウマ娘名",
     opponent="対戦相手の名前（カンマ区切りで複数名）"
 )
@@ -104,7 +104,7 @@ async def results(interaction: discord.Interaction):
 # /delete_result コマンド（管理者専用）
 @bot.tree.command(name="delete_result", description="指定した部屋の試合結果を削除します（管理者専用）")
 @app_commands.describe(
-    room="削除したい部屋番号（例: 3-A）"
+    room="削除したい部屋番号（例: A-3）"
 )
 async def delete_result(interaction: discord.Interaction, room: str):
     room = room.upper()
